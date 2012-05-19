@@ -1,0 +1,16 @@
+* cambio en el fs:
+    * grabar el journal en el secundario
+    * grabar el cambio en el principal
+    * marcar el bloque como cambiado.
+
+* cada tanto aplicar el log en los secundarions así podemos borrarlo
+    * esto implica desmarcar los bloques modificados
+
+* si el ppal se cae
+    * elegir un secundario como ppal
+    * aplicar el log
+    * convertirlo en ppal
+
+* si el sec/log se cae:
+    * elegir primer secundario como logger
+    * copiar los datos marcados como cambiados al secundario.

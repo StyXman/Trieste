@@ -1,0 +1,16 @@
+KERNELSRC=/home/mdione/src/projects/Trieste/uml-2.4/kernel-source-2.4.26
+CC=gcc-3.3
+# CFLAGS="-U__i386__ -Ui386 -DUM_FASTCALL -D__arch_um__ -DSUBARCH=\\\"i386\\\" -I$KERNELSRC/arch/um/include -Derrno=kernel_errno -I$KERNELSRC/arch/um/kernel/tt/include -I$KERNELSRC/arch/um/kernel/skas/include"
+HOSTCC=$CC
+
+export CC HOSTCC CFLAGS
+
+./makeconf.sh
+./configure \
+  --prefix=$HOME/local \
+  --with-kernel=$KERNELSRC \
+  --enable-kernel-module \
+  --enable-lib \
+  --enable-util \
+  --disable-example \
+  --enable-python

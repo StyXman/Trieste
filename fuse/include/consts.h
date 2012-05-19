@@ -1,0 +1,12 @@
+#define statIno 0
+#define statMode 1
+#define statSize 2
+#define statNlink 3
+#define statCtime 4
+#define statAtime 5
+#define statMtime 6
+#define statUid 7
+#define statGid 8
+#define pageSize 4096
+#define pageSizeBits 12
+#define statTupleSize 4096

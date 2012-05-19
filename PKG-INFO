@@ -1,0 +1,20 @@
+Metadata-Version: 1.0
+Name: Trieste
+Version: 0.1b-1
+Summary: Trieste is a Distributed File System.
+Home-page: http://plantalta.homelinux.net/~mdione/projects/Trieste
+Author: Marcos D. Dione
+Author-email: mdione@grulic.org.ar
+License: GPL
+Description: 
+        Trieste is a DFS with allocation policy support and low configuration.
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Natural Language :: Spanish
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet
