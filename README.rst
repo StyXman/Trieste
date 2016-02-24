@@ -13,15 +13,15 @@ suitable for clusters.
 Here are some bare instrunctions on how to compile it:
 
 * decompress (I think you already did that).
-* edit fuse/conf. modify the --prefix and --with-kernel options to your needs.
-$ `make config`  # (this runs a configure script under the fuse dir).
-$ `make`
-# `make install`  # (run as root. installs the kernel and sets some permissions)
+* edit {{fuse/conf}}. modify the --prefix and --with-kernel options to your needs.
+* $ ``make config``  # (this runs a configure script under the fuse dir).
+* $ ``make``
+* # ``make install``  # (run as root. installs the kernel and sets some permissions)
 
 If you're running some debians and ubuintus (I think they' re sid and breezy),
 that last command might fail miserably. try:
 
-* `make CC=gcc-3.3`
+* ``make CC=gcc-3.3``
 
 or any other gcc you might have installed (gcc-3.4 and gcc-4.0 seem to be the
 problematic ones).
@@ -29,20 +29,20 @@ problematic ones).
 Unluckily, it runs only against linux-kernel-2.4. I' ll try to fix that ASAP. To
 run this beast:
 
-* edit `config.sh`
-$ `./run.sh <n>`
+* edit ``config.sh``
+* $ ``./run.sh <n>``
 
 where n is the amount of storage namagers you want.
 
-$ `PYTHONPATH=. ./utils/mkfs.py`
+* $ ``PYTHONPATH=. ./utils/mkfs.py``
 
 formats the root dir. now it's ready for mounting.
 
-$ `./fuse/util/fusermount -c <mntpt> ./virtue.py -b <netaddr>`
+* $ ``./fuse/util/fusermount -c <mntpt> ./virtue.py -b <netaddr>``
 
 where <mntpt> is the mount point and <netaddr> is the network address; or
 
-$ `./fuse/util/fusermount -c <mntpt> ./virtue.py -c umbie://localhost:5647/`
+* $ ``./fuse/util/fusermount -c <mntpt> ./virtue.py -c umbie://localhost:5647/``
 
 Now you can enter into <mntpt> and do whatever you do with a filesystem!
 
