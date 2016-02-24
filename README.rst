@@ -13,7 +13,7 @@ suitable for clusters.
 Here are some bare instrunctions on how to compile it:
 
 * decompress (I think you already did that).
-* edit {{fuse/conf}}. modify the --prefix and --with-kernel options to your needs.
+* edit ``fuse/conf``. modify the ``--prefix`` and ``--with-kernel`` options to your needs.
 * $ ``make config``  # (this runs a configure script under the fuse dir).
 * $ ``make``
 * # ``make install``  # (run as root. installs the kernel and sets some permissions)
